@@ -24,13 +24,16 @@ class Form extends Component {
 
   render() {
     return (
-      <form>
-        <input
-          type="text"
-          value={this.state.value}
-          onChange={this.handleChange}
-        />
-      </form>
+      <div>
+        <h2>Form:</h2>
+        <form>
+          <input
+            type="text"
+            value={this.state.value}
+            onChange={this.handleChange}
+          />
+        </form>
+      </div>
     );
   }
 }

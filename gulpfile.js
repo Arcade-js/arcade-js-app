@@ -19,5 +19,10 @@ gulp.task("webpack:build", function(cb) {
 
 /* watches all assets for changes and runs sub-tasks */
 gulp.task("watch", function() {
-  gulp.watch("app/**/*", gulp.series("webpack:build"));
+  gulp.watch(
+    [
+      "app/**/*",
+      "!app/public/js/*"
+  ],
+  gulp.series("webpack:build"));
 });

@@ -4,7 +4,9 @@
   "description": "Arcade.js: An online arcade with a peak under the hood for those that are curious.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "build": "webpack --mode production",
+    "dev": "npm run build && gulp watch",
+    "start": "node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,9 +23,19 @@
   },
   "homepage": "https://arcadejs.com",
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
     "express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2",
-    "react": "^16.13.1"
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }

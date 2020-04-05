@@ -1,0 +1,21 @@
+#leaderboard {
+  @include temporary-button-style;
+}
+
+.leaderboards {
+  display: flex;
+  flex-direction: row;
+  .leaderboards__scorecard {
+    border-radius: 5px;
+    border: 1px solid $form-border;
+    min-height: 330px;
+    min-width: 200px;
+    margin: 40px 10px;
+  }
+  @media screen and (max-width: $mobile-max) {
+    flex-direction: column;
+    .leaderboards__scorecard {
+      margin: 10px 0 20px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-color;
+  color: $secondary-color;
+  top: 0;
+  width: 100%;
+  min-height: 50px;
+}
+
+.navbar__logo-container {
+  margin-left: 15px;
+  @include temporary-button-style;
+}
+
+.navbar__links-container {
+  margin-right: 15px;
+  @include temporary-button-style;
+}

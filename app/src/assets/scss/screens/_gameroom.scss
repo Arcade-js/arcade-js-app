@@ -1,0 +1,8 @@
+#gameroom {
+  @include temporary-button-style;
+}
+
+.game-list {
+  display: flex;
+  flex-direction: row;
+}

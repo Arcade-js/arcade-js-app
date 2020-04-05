@@ -4,7 +4,7 @@
   "description": "Arcade.js: An online arcade with a peak under the hood for those that are curious.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production && gulp build:sass",
+    "build": "webpack --mode production",
     "js": "npm run build && gulp watch:js",
     "sass": "gulp build:sass && gulp watch:sass",
     "start": "nodemon server/index.js",

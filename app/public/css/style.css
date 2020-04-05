@@ -1,5 +1,218 @@
+/* desktop */
+/* tablet */
+/* phablet */
+/* mobile */
+/* background color */
+/* text colors */
+/* accent colors */
+/* forms */
+html, body {
+  margin: 0;
+  padding: 0; }
+
+main {
+  padding: 30px; }
+
+main div {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.hidden {
+  display: none; }
+
+h1, h2, h3, h4, h5
+.h1, .h2, .h3, .h4, .h5 {
+  color: #2c2b30; }
+
+h1, .h1 {
+  font-size: 22px; }
+
+h2, .h2 {
+  font-size: 20px; }
+
+h3, .h3 {
+  font-size: 18px; }
+
+h4, .h4 {
+  font-size: 16px; }
+
+h5, .h5 {
+  font-size: 14px; }
+
+p {
+  color: #4f4f51;
+  font-size: 12px; }
+
 #footer {
-  background-color: red; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  background-color: #f58f7c;
+  color: #f2c4ce;
+  bottom: 0;
+  width: 100%;
+  margin-top: 30px; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%; }
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #d5d5d5;
+  margin-bottom: 10px;
+  width: 100%; }
+
+input[type=submit] {
+  background-color: #f58f7c;
+  color: #f2c4ce;
+  font-size: 16px;
+  width: calc(100% + 22px); }
+  input[type=submit]:hover {
+    background-color: #f2c4ce;
+    color: #f58f7c;
+    border-color: #4f4f51;
+    cursor: pointer; }
 
 #navbar {
-  background-color: red; }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f58f7c;
+  color: #f2c4ce;
+  top: 0;
+  width: 100%;
+  min-height: 50px; }
+
+.navbar__logo-container {
+  margin-left: 15px; }
+  .navbar__logo-container a {
+    background-color: #f2c4ce;
+    color: #4f4f51;
+    border: 1px solid #4f4f51;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px;
+    margin-right: 5px; }
+    .navbar__logo-container a:last-of-type {
+      margin-right: 0; }
+    .navbar__logo-container a:hover {
+      background-color: #f58f7c;
+      color: #f2c4ce; }
+
+.navbar__links-container {
+  margin-right: 15px; }
+  .navbar__links-container a {
+    background-color: #f2c4ce;
+    color: #4f4f51;
+    border: 1px solid #4f4f51;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px;
+    margin-right: 5px; }
+    .navbar__links-container a:last-of-type {
+      margin-right: 0; }
+    .navbar__links-container a:hover {
+      background-color: #f58f7c;
+      color: #f2c4ce; }
+
+.game a {
+  background-color: #f2c4ce;
+  color: #4f4f51;
+  border: 1px solid #4f4f51;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 5px;
+  margin-right: 5px; }
+  .game a:last-of-type {
+    margin-right: 0; }
+  .game a:hover {
+    background-color: #f58f7c;
+    color: #f2c4ce; }
+
+.game-container {
+  min-height: 300px;
+  min-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #d5d5d5;
+  margin: 20px; }
+
+#gameroom a {
+  background-color: #f2c4ce;
+  color: #4f4f51;
+  border: 1px solid #4f4f51;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 5px;
+  margin-right: 5px; }
+  #gameroom a:last-of-type {
+    margin-right: 0; }
+  #gameroom a:hover {
+    background-color: #f58f7c;
+    color: #f2c4ce; }
+
+.game-list {
+  display: flex;
+  flex-direction: row; }
+
+#login a {
+  background-color: #f2c4ce;
+  color: #4f4f51;
+  border: 1px solid #4f4f51;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 5px;
+  margin-right: 5px; }
+  #login a:last-of-type {
+    margin-right: 0; }
+  #login a:hover {
+    background-color: #f58f7c;
+    color: #f2c4ce; }
+
+#leaderboard a {
+  background-color: #f2c4ce;
+  color: #4f4f51;
+  border: 1px solid #4f4f51;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 5px;
+  margin-right: 5px; }
+  #leaderboard a:last-of-type {
+    margin-right: 0; }
+  #leaderboard a:hover {
+    background-color: #f58f7c;
+    color: #f2c4ce; }
+
+.leaderboards {
+  display: flex;
+  flex-direction: row; }
+  .leaderboards .leaderboards__scorecard {
+    border-radius: 5px;
+    border: 1px solid #d5d5d5;
+    min-height: 330px;
+    min-width: 200px;
+    margin: 40px 10px; }
+  @media screen and (max-width: 500px) {
+    .leaderboards {
+      flex-direction: column; }
+      .leaderboards .leaderboards__scorecard {
+        margin: 10px 0 20px; } }
+
+#signup a {
+  background-color: #f2c4ce;
+  color: #4f4f51;
+  border: 1px solid #4f4f51;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 5px;
+  margin-right: 5px; }
+  #signup a:last-of-type {
+    margin-right: 0; }
+  #signup a:hover {
+    background-color: #f58f7c;
+    color: #f2c4ce; }

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import getYear from '../assets/js/lib/get-year';
 
 
 class Footer extends Component{
    render(){
       return(
-         <div>
-            <h1>Footer</h1>
+         <div id="footer">
+            <p>&copy; {`${getYear()}`} Arcade.js</p>
          </div>
       );
    }

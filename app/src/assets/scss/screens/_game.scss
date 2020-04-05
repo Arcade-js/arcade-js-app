@@ -1,0 +1,11 @@
+.game {
+  @include temporary-button-style;
+}
+
+.game-container {
+  min-height: 300px;
+  min-width: 300px;
+  border-radius: 5px;
+  border: 1px solid $form-border;
+  margin: 20px;
+}

@@ -29,7 +29,7 @@ gulp.task("watch:js", function() {
 /* compiles all sass files into main.css */
 gulp.task("build:sass", function(cb) {
   gulp
-    .src("./app/src/scss/**/*.scss")
+    .src("./app/src/assets/scss/**/*.scss")
     .pipe(sass(/*{ outputStyle: 'compressed' }*/).on("error", sass.logError))
     .pipe(gulp.dest("./app/public/css"));
   cb();
@@ -37,7 +37,7 @@ gulp.task("build:sass", function(cb) {
 
 /* watch scss directory for changes */
 gulp.task("watch:sass", function(cb) {
-  gulp.watch("./app/src/scss/**/*",
+  gulp.watch("./app/src/assets/scss/**/*",
   gulp.series("build:sass"));
   cb();
 });

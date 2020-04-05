@@ -1,0 +1,18 @@
+@mixin temporary-button-style {
+  a {
+    background-color: $secondary-color;
+    color: $light-text;
+    border: 1px solid $light-text;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px;
+    margin-right: 5px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &:hover {
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+  }
+}

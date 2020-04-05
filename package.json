@@ -4,8 +4,9 @@
   "description": "Arcade.js: An online arcade with a peak under the hood for those that are curious.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "npm run build && gulp watch",
+    "build": "webpack --mode production && gulp build:sass",
+    "js": "npm run build && gulp watch:js",
+    "sass": "gulp build:sass && gulp watch:sass",
     "start": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

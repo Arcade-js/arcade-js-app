@@ -15,8 +15,6 @@ function generateMap(fieldSize = 4) {
     return Array(fieldSize).fill(0);
   });
   const { x, y } = getRandomCoord(map);
-  //   const initialCellX = Math.floor(Math.random() * fieldSize);
-  //   const initialCellY = Math.floor(Math.random() * fieldSize);
   map[x][y] = 2;
   return map;
 }
@@ -113,6 +111,24 @@ function checkForEmptyCells(map) {
   return false;
 }
 
+function checkForPossibleMoves(map) {
+  const scans = map.length * 2 - 1;
+  const maxIndex = map.length - 1;
+  for (let scan = 0; scan <= scans; scan++) {
+    let x = scan <= maxIndex ? 0 : scan - maxIndex;
+    while (x <= scan && x <= maxIndex) {
+      let y = Math.abs(scan - x);
+      const matchBelow = x !== maxIndex && map[x][y] === map[x + 1][y];
+      const matchRight = y !== maxIndex && map[x][y] === map[x][y + 1];
+      if (matchBelow || matchRight) {
+        return true;
+      }
+      x++;
+    }
+  }
+  return false;
+}
+
 function getRandomCoord(map) {
   const fieldSize = map.length;
   let x = null;
@@ -131,4 +147,11 @@ const move = {
   left,
 };
 
-export { generateMap, checkForEmptyCells, getRandomCoord, move, keyHash };
+export {
+  generateMap,
+  checkForEmptyCells,
+  checkForPossibleMoves,
+  getRandomCoord,
+  move,
+  keyHash,
+};

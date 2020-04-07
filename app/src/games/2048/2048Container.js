@@ -6,6 +6,7 @@ import {
   getRandomCoord,
   move,
   keyHash,
+  checkForPossibleMoves,
 } from "./utils";
 import _2048 from "./2048";
 
@@ -31,9 +32,14 @@ class _2048Container extends Component {
     let direction = keyHash[evt.keyCode];
     if (direction) {
       const map = move[direction](this.state.map);
-      // also need a check for possible moves
-      if (!checkForEmptyCells(map)) {
-        this.setState({ status: "game over" });
+      const mapHasEmptyCells = checkForEmptyCells(map);
+      if (!mapHasEmptyCells) {
+        const mapHasPossibleMoves = checkForPossibleMoves(map);
+        if (mapHasPossibleMoves) {
+          this.setState({ previousMove: this.state.map, map });
+        } else {
+          this.setState({ status: "game over" });
+        }
       } else {
         const { x, y } = getRandomCoord(map);
         map[x][y] = 2;
@@ -47,7 +53,14 @@ class _2048Container extends Component {
     return (
       <div id="2048" className="game">
         <h1>2048</h1>
-        <_2048 map={this.state.map} previous={this.state.previousMove} />
+        {this.state.status === "game over" && (
+          <div>
+            <p>Game Over</p>
+          </div>
+        )}
+        {this.state.status === "playing" && (
+          <_2048 map={this.state.map} previous={this.state.previousMove} />
+        )}
         <Link to="/gameroom">Return to the Gameroom</Link>
       </div>
     );

@@ -41,7 +41,7 @@ class App extends Component {
               {/* GAMES */}
               <Route exact path="/block-breaker" component={BlockBreaker} />
               <Route exact path="/number-smash" component={NumberSmash} />
-              <Route exact path="/game2048" component={_2048} />
+              <Route exact path="/2048" component={_2048} />
               {/* 404 PAGE */}
               <Route component={NotFound} />
             </Switch>
